@@ -1,14 +1,10 @@
-import { useState } from 'react'
-
-const { VITE_API_BASE: API_BASE, VITE_API_PATH: API_PATH } = import.meta.env;
+import { RouterProvider } from "react-router";
+import { router } from './router';
 
 function App() {
-  
-
-  return (
-    <>
-    </>
-  )
+  return <>
+    <RouterProvider router={router}/>
+  </>
 }
 
 export default App
