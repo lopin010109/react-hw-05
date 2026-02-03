@@ -68,6 +68,7 @@ function Cart() {
           type="button" 
           className="btn btn-outline-danger"
           onClick={() => delCartAll()}
+          disabled={cart.length === 0}
         >
           清空購物車
         </button>
@@ -105,6 +106,7 @@ function Cart() {
                       aria-label="Sizing example input" 
                       aria-describedby="inputGroup-sizing-sm"
                       defaultValue={cartItem.qty}
+                      min="0"
                       onChange={(e) => updateCart(cartItem.id, cartItem.product_id, Number(e.target.value))}
                     />
                     <span 
